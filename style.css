@@ -1,7 +1,7 @@
-#lunch, #dinner{
+#lunch, #dinner, #breakfast{
   border:1px solid black;
 }
 
-#lunch, #dinner{
+#lunch, #dinner, #breakfast{
   display:none;
 }
