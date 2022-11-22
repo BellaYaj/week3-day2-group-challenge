@@ -1,0 +1,87 @@
+<html>
+<body>
+<head>
+    <meta content="charset=utf-8"
+    title="Week3Day1 Group Challenge"
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <div id='Breakfast'>
+  </div>
+
+  <div>
+    <h2>Breakfast Recipe</h2>
+        <ol>
+            <li>Prepare eggs</li>
+            <li>Heat pan</li>
+            <li>Cook sausages</li>
+            <li>Cook eggs to liking</li>
+            <li>Transfer all on a plate and serve</li>
+        </ol>
+</div>
+
+<div id='lunch'>
+    <h2>Lunch Recipe</h2>
+    <ol>    
+        <li>Prepare burger party</li>
+        <li>Grill patty on medium heat</li>
+        <li>Toast bun while grilling meat</li>
+        <li>Prepare toppings</li>
+        <li>Assemble ingredients into hamburger when done</li>
+    </ol>
+</div>
+
+<div>
+    <div id='dinner'>
+    <h2>Dinner Recipe</h2>
+    <ol>
+        <li>Prepare chicken leg</li>
+        <li>Grill leg on medium heat</li>
+        <li>Prepare BBQ sauce</li>
+        <li>Slowly brush sause on the chicken</li>
+        <li>Wait 10 minutes and plate the chicken</li>
+    </ol>
+</div>
+
+<script>
+    var mealName = [breakfast, lunch, dinner];
+
+    function lunch(){
+        document.write("<div class='lunch'><h2>Lunch Recipe</h2><ol><li>Prepare burger party</li><li>Grill patty on medium heat</li><li>Toast bun while grilling meat</li><li>Prepare toppings</li><li>Assemble ingredients into hamburger when done</li></ol></div>")
+    }
+
+    function dinner(){"<div id='dinner'><h2>Dinner Recipe</h2><ol><li>prepare Chicken leg</li><li>Grill leg on medium heat</li><li>Prepare BBQ sauce</li><li>slowly brush sause on the chicken</li><li>wait 10 minutes and plate the chicken.</li></ol></div>")
+    }
+
+     function breakfast() {
+            document.write('<br><br> You are too late for dinner or lunch');
+        }
+var d = new Date(); //Get current date
+var hr = d.getHours() - 9; //Get current hours
+// document.write(d .+. '.' .+. hr);
+
+if (hr <= 12){ document.getElementById("lunch").style.display="block" ; } else if (hr <=19 ){
+    document.getElementById("dinner").style.display="block" ; } else{ document.write('<br><br> You are too late for
+    dinner or lunch');
+    }
+    
+for (var i = 0; i < 3; i++) { //0 1 2 
+   mealName[i] //lunch();
+}
+
+
+ if (hr <= 12){
+      var mealTime = "Breakfast";
+ }
+ else if (hr <= 18){
+    var mealTime = "Lunch";
+}
+ else  {
+    var mealTime = "Dinner";
+}
+
+document.write("you should cook" + mealTime + '. It is' + hr + ".");
+</script>
+</body>
+</html>
